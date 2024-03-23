@@ -1,0 +1,14 @@
+.skew-animation {
+    animation: skewAnimation 0.3s ease-in-out;
+  }
+  
+  @keyframes skewAnimation {
+    0% { transform: skewX(0deg); }
+    100% { transform: skewX(-20deg); }
+  }
+
+@media only screen and (max-width: 525px){
+    form{
+        width: 75% !important;
+    }
+  }

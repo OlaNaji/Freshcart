@@ -1,0 +1,104 @@
+<section class="px-2">
+    <div class="container">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <figure class="m-0">
+            <owl-carousel-o [options]="customOptions">
+              <ng-template carouselSlide> <img src="./assets/images/main-slider-1.jpeg" class="w-100 slider-big" alt="">
+              </ng-template>
+              <ng-template carouselSlide> <img src="./assets/images/main-slider-2.jpeg" class="w-100 slider-big" alt="">
+              </ng-template>
+              <ng-template carouselSlide> <img src="./assets/images/main-slider-3.jpeg" class="w-100 slider-big" alt="">
+              </ng-template>
+            </owl-carousel-o>
+          </figure>
+        </div>
+        <div class="col-md-4 d-none d-md-block m-0 p-0">
+          <figure>
+            <owl-carousel-o [options]="customOptions">
+              <ng-template carouselSlide> <img src="./assets/images/main-slider-2.jpeg" class="w-100 slider-small" alt="">
+              </ng-template>
+              <ng-template carouselSlide> <img src="./assets/images/main-slider-3.jpeg" class="w-100 slider-small" alt="">
+              </ng-template>
+              <ng-template carouselSlide> <img src="./assets/images/main-slider-1.jpeg" class="w-100 slider-small" alt="">
+              </ng-template>
+            </owl-carousel-o>
+            <owl-carousel-o [options]="customOptions">
+              <ng-template carouselSlide> <img src="./assets/images/main-slider-3.jpeg" class="w-100 slider-small" alt="">
+              </ng-template>
+              <ng-template carouselSlide> <img src="./assets/images/main-slider-1.jpeg" class="w-100 slider-small" alt="">
+              </ng-template>
+              <ng-template carouselSlide> <img src="./assets/images/main-slider-2.jpeg" class="w-100 slider-small" alt="">
+              </ng-template>
+            </owl-carousel-o>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="px-2">
+    <h2 class=" h3 fw-semibold text-capitalize mt-4">categories</h2>
+    <owl-carousel-o [options]="categoryOptions">
+  
+      <ng-container *ngFor="let category of categories">
+        <ng-template carouselSlide [id]="category._id" >
+          <img [routerLink]="['/categories', category._id]" class="cursor-pointer" height="250px" [src]="category.image" [alt]="category.name" [title]="category.name">
+          <h3 [routerLink]="['/categories', category._id]" class="cursor-pointer">{{category.name}}</h3>
+        </ng-template>
+      </ng-container>
+  
+    </owl-carousel-o>
+  </section>
+  
+  <section class="products-container">
+    <h2 class=" h3 fw-semibold text-capitalize my-4">popular products</h2>
+  
+  
+    <div class="row gy-4">
+      <div class="product-card col-6 col-md-4 col-lg-3 g-md-4 overflow-hidden cursor-pointer position-relative "
+        *ngFor="let product of products.slice(0, 16)">
+        <div class="product p-2 " [title]="product.title">
+          <div>
+            <figure class="position-relative">
+              <img [routerLink]="['/details', product._id]" [src]="product.imageCover" class="w-100 my-1 "
+                [alt]="product.title">
+  
+              <div #cartBtn (click)="addToCart(product._id, cartBtn)" class="position-absolute cart-container">
+                <div class="position-relative mb-2 cart-container-inner">
+                  <i 
+                    class="fas fa-shopping-cart bg-main-light text-black rounded-circle p-2 "></i>
+                  <span class="cart-text bg-main text-white  rounded-5"> add to cart </span>
+                </div>
+              </div>
+  
+              <div (click)="addToWishlist(product._id)" class="wishlist-btn position-absolute rounded-circle border border-1 bg-white bg-opacity-50 ">
+                <i [ngClass]="{ 'fas': isProductLiked(product._id), 'far': !isProductLiked(product._id) }" class=" fa-heart fa-sm"></i>
+              </div>
+  
+            </figure>
+  
+            <figcaption class="">
+              <h3 class="h6 d-none d-md-block">{{product.category.name}}</h3>
+              <h4 class="h6 fw-bolder" [routerLink]="['/details', product._id]">
+                {{product.title.split(' ', 2).join(' ')}}
+                <span *ngIf="product.title.split(' ').length > 2">..</span>
+              </h4>
+              <div class="info ">
+                <p class="p-0 m-0 fw-semibold">{{product.price}} EGP</p>
+                <div><i [class.rating-color]="product.ratingsAverage >= num" *ngFor="let num of [1,2,3,4,5]"
+                    class="fas fa-star"></i> {{product.ratingsAverage}}</div>
+              </div>
+            </figcaption>
+  
+          </div>
+  
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  

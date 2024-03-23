@@ -1,0 +1,51 @@
+<section>
+    <section class="px-2">
+        <!-- <h2 class=" h3 fw-semibold text-capitalize">categories</h2> -->
+        <owl-carousel-o [options]="brandsCarousel_1">
+          <ng-container *ngFor="let brand of brands.slice(0, 20)">
+            <ng-template carouselSlide [id]="brand._id" >
+                <img [routerLink]="['/brands', brand._id]" 
+                     (click)="selectBrand(brand._id)"
+                     class="cursor-pointer" 
+                     [src]="brand.image" 
+                     [alt]="brand.name" 
+                     [title]="brand.name">              <!-- <h3 [routerLink]="['/categories', brand._id]" class="cursor-pointer">{{brand.name}}</h3> -->
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+
+        <owl-carousel-o [options]="brandsCarousel_2">
+            <ng-container *ngFor="let brand of brands.slice(20)">
+              <ng-template carouselSlide [id]="brand._id" >
+                <img [routerLink]="['/brands', brand._id]" 
+                     (click)="selectBrand(brand._id)"
+                     class="cursor-pointer" 
+                     [src]="brand.image" 
+                     [alt]="brand.name" 
+                     [title]="brand.name">
+                <!-- <h3 [routerLink]="['/categories', brand._id]" class="cursor-pointer">{{brand.name}}</h3> -->
+              </ng-template>
+            </ng-container>
+          </owl-carousel-o>
+      </section>
+
+</section>
+
+
+<section>
+    <div class="row flex-column-reverse flex-md-row">
+        <div class="col-md-2">
+            <div class="row justify-content-around brandContainer">
+                <a *ngFor="let brand of brands" 
+                    [routerLink]="['/brands', brand._id]"
+                    routerLinkActive="active-link"
+                    (click)="selectBrand(brand._id)"
+                    class="brandLink fw-light m-2 col-3 col-md-12">{{brand.name}}</a>
+              </div>
+        </div>
+
+        <div class="col-md-10">
+            <app-products [brand]="selectedBrand"></app-products>
+        </div>
+    </div>
+</section>

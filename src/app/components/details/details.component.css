@@ -1,0 +1,1094 @@
+@import url('https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap'); 
+  body {  
+    direction:ltr;
+    line-height:1.4;
+    font-size:14.5px;
+    color:#333333;
+    font-family:"Jost", Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    cursor:default;
+  }  
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+} 
+
+div { 
+    margin: 0; 
+    padding: 0; 
+    direction: ltr;
+} 
+
+body { 
+    overflow-x: hidden; 
+    overflow-y: auto;
+} 
+
+body { 
+    font-size: 14.5px;
+} 
+
+body { 
+    color: #333333; 
+    padding: 0; 
+    margin: 0; 
+    font-family: "Open Sans", Helvetica, Arial, sans-serif; 
+    font-weight: normal; 
+    font-style: normal; 
+    line-height: 1; 
+    position: relative; 
+    cursor: default;
+} 
+
+body { 
+    min-height: 100%; 
+    background-color: transparent;
+} 
+
+body { 
+    font-family: "Jost", Arial, Helvetica, sans-serif;
+} 
+
+html { 
+    font-family: sans-serif; 
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%;
+} 
+
+html { 
+    font-size: 14.5px;
+} 
+
+html { 
+    min-height: 100%;
+} 
+
+.nasa-content  { 
+    margin-bottom: 50px;
+} 
+
+*,:before,:after { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+} 
+
+h3 { 
+    margin: 0; 
+    padding: 0; 
+    direction: ltr;
+} 
+
+h3 { 
+    font-weight: bold; 
+    font-style: normal; 
+    color: inherit; 
+    text-rendering: optimizeLegibility; 
+    margin-top: 0.2em; 
+    margin-bottom: 0.5em; 
+    line-height: 1.1931em;
+} 
+
+h3 { 
+    font-size: 1.31034em;
+} 
+
+@media only screen and (min-width: 768px){ 
+  h3 { 
+    line-height: 1.4;
+  } 
+
+  h3 { 
+    font-size: 1.65517em;
+  } 
+}     
+
+h3 { 
+    font-weight: 500 !important;
+} 
+
+h3 { 
+    font-family: "Jost", Arial, Helvetica, sans-serif;
+} 
+
+.nasa-title { 
+    margin-bottom: 8px; 
+    position: relative; 
+    clear: both; 
+    font-size: 110%;
+} 
+
+.nasa-content > .nasa-title  { 
+    font-size: 25px; 
+    color: #2d2a2a; 
+    margin-bottom: 20px; 
+    display: -webkit-inline-box; 
+    display: -moz-inline-box; 
+    display: -ms-inline-flexbox; 
+    display: inline-flex; 
+    -webkit-box-align: center; 
+    -ms-flex-align: center; 
+    -webkit-align-items: center; 
+    align-items: center;
+} 
+
+.nasa-vertical-notabs .nasa-content > .nasa-title::after { 
+    content: ""; 
+    width: 40px; 
+    height: 3px; 
+    border-bottom: 1px solid #ddd; 
+    margin: 0 20px;
+} 
+
+@media only screen and (min-width: 1024px){ 
+  .nasa-content > .nasa-content-panel  { 
+    padding-left: 150px;
+  } 
+}     
+
+#reviews .nasa-statistic-ratings  { 
+    width: 50%; 
+    display: inline-block; 
+} 
+
+#reviews .nasa-statistic-ratings  { 
+    padding-right: 20px;
+} 
+
+#reviews #review_form_wrapper  { 
+    width: 50%; 
+    display: inline-block; 
+    float: left;
+} 
+
+#reviews #review_form_wrapper  { 
+    padding-left: 20px;
+} 
+
+a { 
+    background: transparent;
+} 
+
+a { 
+    color: #333333; 
+    text-decoration: none; 
+    line-height: inherit;
+} 
+
+.button { 
+    border-width: 1px; 
+    border-style: solid; 
+    text-transform: uppercase; 
+    cursor: pointer; 
+    font-family: inherit; 
+    letter-spacing: 2px; 
+    font-weight: bold; 
+    line-height: 1.4; 
+    margin: 0; 
+    position: relative; 
+    text-decoration: none; 
+    text-align: center; 
+    display: -webkit-inline-box; 
+    display: -moz-inline-box; 
+    display: -ms-inline-flexbox; 
+    display: inline-flex; 
+    -webkit-box-pack: center; 
+    -ms-flex-pack: center; 
+    justify-content: center; 
+    -webkit-box-align: center; 
+    -ms-flex-align: center; 
+    -webkit-align-items: center; 
+    align-items: center; 
+    padding: 0 30px; 
+    height: 42px; 
+    font-size: 12px; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px;
+} 
+
+.button { 
+    font-weight: 500 !important;
+} 
+
+.button,a.button { 
+    background-color: #f76b6a; 
+    border-color: #f76b6a; 
+    color: #FFF;
+} 
+
+.html-ready a { 
+    -webkit-transition: color 200ms ease; 
+    -moz-transition: color 200ms ease; 
+    -o-transition: color 200ms ease; 
+    transition: color 200ms ease;
+} 
+
+.button ,a.button  { 
+    background-color: var(--main-color); 
+    border-color: var(--main-color); 
+    color: #FFF;
+} 
+
+.button  { 
+    -webkit-transition: all 200ms ease; 
+    -moz-transition: all 200ms ease; 
+    -o-transition: all 200ms ease; 
+    transition: all 200ms ease;
+} 
+
+.button:not(.add-to-cart-grid) { 
+    background-color: var(--main-color) !important;
+} 
+
+.button:not(.add-to-cart-grid) { 
+    border-color: #ffffff !important;
+} 
+
+.button:not(.add-to-cart-grid)  { 
+    border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    -o-border-radius: 5px; 
+    -moz-border-radius: 5px;
+} 
+
+#reviews .btn-add-new-review  { 
+    display: none;
+} 
+
+a:active,a:hover { 
+    outline: 0;
+} 
+
+a:hover { 
+    cursor: pointer;
+} 
+
+a:hover { 
+    color: #f76b6a;
+} 
+
+ body a:hover { 
+    color: var(--main-color);
+} 
+
+.button:hover,a.button:hover { 
+    background-color: #f54543; 
+    border-color: #f54543; 
+    color: #FFF;
+} 
+
+ body .button:hover { 
+    background-color: var(--main-color);
+} 
+
+ body .button:hover, body a.button:hover, body * .button:hover { 
+    background-color: #5c683a; 
+    border-color: #5c683a; 
+    color: #FFF;
+} 
+
+.button:not(.add-to-cart-grid):hover, body .button:hover, body a.button:hover { 
+    background-color: var(--main-color)!important;
+} 
+
+.nasa-clear-both { 
+    clear: both;
+} 
+
+#reviews #comments  { 
+    padding-top: 30px;
+} 
+
+.clear { 
+    clear: both;
+} 
+
+h2 { 
+    margin: 0; 
+    padding: 0; 
+    direction: ltr;
+} 
+
+h2 { 
+    font-weight: bold; 
+    font-style: normal; 
+    color: inherit; 
+    text-rendering: optimizeLegibility; 
+    margin-top: 0.2em; 
+    margin-bottom: 0.5em; 
+    line-height: 1.1931em;
+} 
+
+h2 { 
+    font-size: 1.10345em;
+} 
+
+@media only screen and (min-width: 768px){ 
+  h2 { 
+    line-height: 1.4;
+  } 
+
+  h2 { 
+    font-size: 1.7931em;
+  } 
+}     
+
+h2 { 
+    font-weight: 500 !important;
+} 
+
+h2 { 
+    font-family: "Jost", Arial, Helvetica, sans-serif;
+} 
+
+.nasa-statistic-ratings h2  { 
+    font-size: 110%; 
+    text-transform: capitalize; 
+    margin-top: 0; 
+    margin-bottom: 10px; 
+    line-height: 1.4; 
+    display: block; 
+    font-weight: 700; 
+    color: #333e48;
+} 
+
+.nasa-avg-rating { 
+    display: inline-block; 
+    margin: 5px 0 10px;
+} 
+
+table { 
+    border-collapse: collapse; 
+    border-spacing: 0;
+} 
+
+table { 
+    margin-bottom: 1.37931em; 
+    width: 100%;
+} 
+
+table { 
+    width: 100%;
+} 
+
+.nasa-stclose { 
+    position: relative; 
+    width: 36px; 
+    height: 36px; 
+    display: inline-block; 
+    font-size: 0; 
+    color: transparent; 
+    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%; 
+    border-radius: 50%;
+} 
+
+.nasa-stclose.ns-form-close { 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 400;
+} 
+
+.nasa-stclose  { 
+    -webkit-transition: all 200ms ease; 
+    -moz-transition: all 200ms ease; 
+    -o-transition: all 200ms ease; 
+    transition: all 200ms ease;
+} 
+
+#reviews #review_form_wrapper .close-review-form  { 
+    display: none;
+} 
+
+.nasa-stclose:before,.nasa-stclose:after { 
+    content: ""; 
+    width: 16px; 
+    height: 0px; 
+    position: absolute; 
+    top: 17px; 
+    left: 10px; 
+    border-top: 1px solid #333;
+} 
+
+.nasa-stclose:before { 
+    -webkit-transform: rotate(-45deg); 
+    -moz-transform: rotate(-45deg); 
+    -o-transform: rotate(-45deg); 
+    -ms-transform: rotate(-45deg); 
+    transform: rotate(-45deg);
+} 
+
+.nasa-stclose:after { 
+    -webkit-transform: rotate(45deg); 
+    -moz-transform: rotate(45deg); 
+    -o-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    transform: rotate(45deg);
+} 
+
+body .primary-color, body a:hover, body p a:hover, body p a:focus, body .add-to-cart-grid .cart-icon strong, body .navigation-paging a, body .navigation-image a, body .logo a, body li.mini-cart .cart-icon strong, body .mini-cart-item .cart_list_product_price, body .remove:hover i, body .support-icon, body .shop_table.cart td.product-name a:hover, body #order_review .cart-subtotal .woocommerce-Price-amount, body #order_review .order-total .woocommerce-Price-amount, body #order_review .woocommerce-shipping-totals .woocommerce-Price-amount, body .cart_totals .order-total td, body a.shipping-calculator-button:hover, body .widget_layered_nav li a:hover, body .widget_layered_nav_filters li a:hover, body .copyright-footer span, body #menu-shop-by-category li.active.menu-parent-item .nav-top-link::after, body .nasa-breadcrumb.nasa-breadcrumb-has-bg .row .breadcrumb-row a:hover, body .nasa-breadcrumb.nasa-breadcrumb-has-bg .columns .breadcrumb-row a:hover, body .group-blogs .blog_info .post-date span, body .header-type-1 .header-nav .nav-top-link:hover, body .widget_layered_nav li:hover a, body .widget_layered_nav_filters li:hover a, body .remove .pe-7s-close:hover, body .absolute-footer .left .copyright-footer span, body .service-block .box .title .icon, body .service-block.style-3 .box .service-icon, body .service-block.style-2 .service-icon, body .service-block.style-1 .service-icon, body .contact-information .contact-text strong, body .nav-wrapper .root-item a:hover, body .group-blogs .blog_info .read_more a:hover, body #top-bar .top-bar-nav li.color a, body .mini-cart .cart-icon:hover::before, body .absolute-footer li a:hover, body .nasa-recent-posts li .post-date, body .nasa-recent-posts .read-more a, body .shop_table .remove-product .pe-7s-close:hover, body .absolute-footer ul.menu li a:hover, body .nasa-pagination.style-1 .page-number li span.current, body .nasa-pagination.style-1 .page-number li a.current, body .nasa-pagination.style-1 .page-number li a.nasa-current, body .nasa-pagination.style-1 .page-number li a:hover, body #vertical-menu-wrapper li.root-item:hover > a, body .widget.woocommerce li.cat-item a.nasa-active, body .widget.widget_recent_entries ul li a:hover, body .widget.widget_recent_comments ul li a:hover, body .widget.widget_meta ul li a:hover, body .widget.widget_categories li a.nasa-active, body .widget.widget_archive li a.nasa-active, body .nasa-filter-by-cat.nasa-active, body .product-info .stock.in-stock, body #nasa-footer .nasa-contact-footer-custom h5, body #nasa-footer .nasa-contact-footer-custom h5 i, body .group-blogs .nasa-blog-info-slider .nasa-post-date, body li.menu-item.nasa-megamenu > .nav-dropdown > ul > li.menu-item a:hover, body .nasa-tag-cloud a.nasa-active:hover, body .html-text i, body .save-note i, body .header-nav .active .nav-top-link, body ul li .nav-dropdown > ul > li:hover > a, body ul li .nav-dropdown > ul > li:hover > a::before, body ul li .nav-dropdown > ul > li .nav-column-links > ul > li a:hover, body ul li .nav-dropdown > ul > li .nav-column-links > ul > li:hover > a::before, body .topbar-menu-container > ul > li > a:hover, html body.nasa-dark .topbar-menu-container .header-multi-languages li ul li a:hover, body .header-account ul li a:hover, body .header-icons > li a:hover i, body .header-icons > li a:hover .icon-text, body .nasa-title span.nasa-first-word, body .nasa-sc-pdeal.nasa-sc-pdeal-block .nasa-sc-p-img .images-popups-gallery a.product-image .nasa-product-label-stock .label-stock, body .nasa-sc-pdeal.nasa-sc-pdeal-block .nasa-sc-p-info .nasa-sc-p-title h3 a:hover, body #nasa-footer .nasa-footer-contact .wpcf7-form label span.your-email::after, body .nasa-nav-sc-menu .menu-item a:hover, body .nasa-static-sidebar .nasa-wishlist-title:hover, body .nasa-static-sidebar .button-in-wishlist:hover, body .nasa-static-sidebar .mini-cart-info a:hover, body .nasa-login-register-warper #nasa-login-register-form .nasa-switch-form a, body .vertical-menu-container #vertical-menu-wrapper li.root-item:hover > a, body .vertical-menu-container .vertical-menu-wrapper li.root-item:hover > a, body .nasa-menu-vertical-header.vitems-root .nasa-vertical-header .vertical-menu-wrapper > li > a:hover, body .current-menu-item > a.nasa-title-menu, body .product-item .info .name:hover, body .nasa-item-meta .nasa-widget-title:hover, html body.nasa-dark .product-item .info .name:hover, html body.nasa-dark .nasa-item-meta .nasa-widget-title:hover, html body.nasa-dark .nasa-static-sidebar.style-1 .mini-cart-item .product-name:hover, body .nasa-compare-list-bottom .nasa-compare-mess, body .nasa-labels-filter-top .nasa-labels-filter-accordion .nasa-top-row-filter > li.nasa-active a, body .nasa-labels-filter-top .nasa-top-row-filter > li.nasa-active a, body .nasa-labels-filter-top .nasa-tab-push-cats.nasa-push-cat-show, body .nasa-wrap-slick-slide-products-title .nasa-slide-products-title-item.slick-current > a, body .nasa-accordions-content .nasa-accordion-title a.active, body .widget.widget_product_categories li a:hover, body .widget.woocommerce.widget_product_categories li a:hover, body .widget.widget_product_categories li.current-tax-item > a, body .widget.woocommerce.widget_product_categories li.current-tax-item > a, body .widget.widget_product_categories li.current-tax-item .children a:hover, body .widget.woocommerce.widget_product_categories li.current-tax-item .children a:hover, body .widget li a:hover, body .nasa-products-special-deal.nasa-products-special-deal-multi-2 .nasa-list-stock-status span, body .nasa-after-add-to-cart-subtotal-price, body .nasa-total-condition-desc .woocommerce-Price-amount, body .woocommerce-table--order-details tfoot tr:last-child td > .amount, body .woocommerce-MyAccount-navigation.nasa-MyAccount-navigation .woocommerce-MyAccount-navigation-link a:hover::before, body .topbar-menu-container ul ul li a:hover, body .shop_table tbody .product-subtotal, body .grid-product-category .nasa-item-wrap:hover .nasa-view-more i, body .nasa-slide-style li.active a, body #dokan-store-listing-filter-wrap .right .toggle-view .active, body .nasa-product-content-nasa_label-wrap .nasa-product-content-child > a:focus, body .nasa-product-content-nasa_label-wrap .nasa-product-content-child > a:visited, body .nasa-product-content-nasa_label-wrap .nasa-product-content-child > a:hover, body .nasa-product-content-nasa_label-wrap .nasa-product-content-child > a.nasa-active, body .nasa-color-small-square .nasa-attr-ux-color.selected, body .nasa-color-small-square .nasa-attr-ux-color:hover, body .nasa-label-small-square-1 .nasa-attr-ux-label.selected, body .nasa-label-small-square-1 .nasa-attr-ux-label:hover, body .nasa-labels-filter-top .nasa-top-row-filter li a.nasa-active::before, body .nasa-products-special-deal .product-deal-special-title:hover, body .nasa-tab-push-cats.nasa-push-cat-show, body .nasa-sp-mcr .woocs_auto_switcher.nasa-layout li a:hover, body .elementor-element .elementor-widget-heading.primary-color .elementor-widget-container .elementor-heading-title { 
+    color: var(--main-color);
+} 
+
+.nasa-stclose:hover { 
+    background: #f1f1f1;
+} 
+
+#reviews .woocommerce-Reviews-title  { 
+    font-size: 110%; 
+    text-transform: capitalize; 
+    margin-top: 0; 
+    margin-bottom: 15px; 
+    line-height: 1.4; 
+    display: block; 
+    font-weight: 700;
+} 
+
+h2,#reviews .woocommerce-Reviews-title  { 
+    font-weight: 500 !important;
+} 
+
+p { 
+    margin: 0; 
+    padding: 0; 
+    direction: ltr;
+} 
+
+p { 
+    font-size: 100%; 
+    line-height: 1.6; 
+    margin-bottom: 1.37931em; 
+    text-rendering: optimizeLegibility;
+} 
+
+p { 
+    font-family: "Jost", Arial, Helvetica, sans-serif;
+} 
+
+p:last-child { 
+    margin-bottom: 0;
+} 
+
+.nasa-avg-rating .avg-rating-number  { 
+    font-size: 200%; 
+    font-weight: bold; 
+    color: #690;
+} 
+
+.nasa-avg-rating .avg-rating-number  { 
+    font-weight: 500 !important;
+} 
+
+.hidden-tag { 
+    display: none;
+} 
+
+table tr:last-child  { 
+    border-bottom: 0;
+} 
+
+#review_form_wrapper .comment-reply-title  { 
+    font-size: 120%; 
+    line-height: 2; 
+    font-weight: bold; 
+    color: #2d2a2a;
+} 
+
+#reviews .comment-reply-title  { 
+    font-size: 110%; 
+    text-transform: capitalize; 
+    margin-top: 0; 
+    margin-bottom: 15px; 
+    line-height: 1.4; 
+    display: block; 
+    font-weight: 700;
+} 
+
+#reviews .comment-reply-title  { 
+    font-weight: 500 !important;
+} 
+
+form { 
+    margin: 0; 
+    padding: 0; 
+    direction: ltr;
+} 
+
+form { 
+    margin: 0 0 0.96552em;
+} 
+
+td { 
+    margin: 0; 
+    padding: 0; 
+    direction: ltr;
+} 
+
+table td  { 
+    padding: 0px 10px 15px; 
+    text-align: left;
+} 
+
+table tr td  { 
+    padding: 0.62069em 0em; 
+    font-size: 1.06897em;
+} 
+
+table tbody tr td ,table tr td  { 
+    display: table-cell; 
+    line-height: 1.24138em;
+} 
+
+table.nasa-rating-bars td  { 
+    padding: 5px 0; 
+    border: none;
+} 
+
+table.nasa-rating-bars .star-rating-wrap  { 
+    width: 95px;
+} 
+
+table.nasa-rating-bars .nasa-rating-per-wrap  { 
+    padding: 5px 10px;
+} 
+
+.text-right { 
+    text-align: right !important;
+} 
+
+table.nasa-rating-bars .nasa-ratings-number  { 
+    width: 35px; 
+    color: #999; 
+    font-size: 90%;
+} 
+
+small { 
+    font-size: 75%; 
+    line-height: inherit;
+} 
+
+#reviews .comment-notes  { 
+    margin-bottom: 15px;
+} 
+
+#review_form_wrapper .comment-form-rating  { 
+    margin-bottom: 15px; 
+    margin-top: 10px;
+} 
+
+#reviews .comment-form-rating  { 
+    margin-bottom: 10px;
+} 
+
+#reviews .comment-form-author  { 
+    width: 50%; 
+    display: inline-block; 
+    margin: 0 0 10px 0; 
+} 
+
+#reviews .comment-form-author  { 
+    padding-right: 10px;
+} 
+
+#reviews .comment-form-email  { 
+    width: 50%; 
+    display: inline-block; 
+    margin: 0 0 10px 0; 
+} 
+
+#reviews .comment-form-email  { 
+    padding-left: 10px;
+} 
+
+.clear-both { 
+    clear: both;
+} 
+
+#reviews #review_form_wrapper .comment-form .nasa-form-media-wrap  { 
+    display: none;
+} 
+
+.comment-form-cookies-consent { 
+    clear: both; 
+    padding-top: 10px;
+} 
+
+.star-rating { 
+    display: block; 
+    overflow: hidden; 
+    position: relative; 
+    height: 17px; 
+    width: 80px; 
+    margin: 0;
+} 
+
+table.nasa-rating-bars .star-rating-wrap .star-rating  { 
+    margin: 0; 
+    height: 18px;
+} 
+
+.star-rating:before { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0; 
+    content: ""; 
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23CCCCCC"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>') repeat-x; 
+    background-size: 16px;
+} 
+
+.nasa-rating-per { 
+    height: 12px; 
+    width: 100%; 
+    position: relative; 
+    background: #f1f1f1; 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px; 
+    border-radius: 3px;
+} 
+.comment-form{
+    background-color: white !important;
+}
+label { 
+    font-size: 1em; 
+    color: #4d4d4d; 
+    cursor: pointer; 
+    display: block; 
+    font-weight: 500; 
+    margin-bottom: 0.2069em;
+} 
+
+#review_form_wrapper .comment-form-rating label  { 
+    display: inline-block; 
+    margin-right: 15px;
+} 
+
+#reviews .comment-form-rating label  { 
+    display: inline-block;
+} 
+
+.woocommerce-tabs #reviews .comment-form-rating label::after { 
+    content: ":"; 
+    margin-left: 2px;
+} 
+
+#review_form_wrapper .comment-form-rating .stars  { 
+    display: inline-block; 
+    margin-bottom: 0;
+} 
+
+#reviews .comment-form-rating .stars  { 
+    display: inline-block; 
+    position: relative; 
+    top: 2px;
+} 
+
+.woocommerce-tabs #reviews #respond .stars::after { 
+    content: ""; 
+    display: block; 
+    clear: both;
+} 
+
+select { 
+    font: inherit; 
+    margin: 0;
+} 
+
+select { 
+    text-transform: none;
+} 
+
+select { 
+    height: 42px; 
+    line-height: 42px; 
+    padding: 0 10px; 
+    border-color: #cccccc;
+} 
+
+select { 
+    width: 100%;
+} 
+
+select { 
+    margin: 0 0 0.96552em 0;
+} 
+
+select { 
+    outline: none !important; 
+    outline-width: 0 !important; 
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    -ms-appearance: none; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); 
+    background-repeat: no-repeat; 
+    background-position: right 10px center; 
+    background-size: 1em; 
+    background-color: #fff;
+} 
+
+select { 
+    font-family: "Jost", Arial, Helvetica, sans-serif;
+} 
+
+select  { 
+    border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    -o-border-radius: 5px; 
+    -moz-border-radius: 5px;
+} 
+
+form select  { 
+    height: 42px; 
+    line-height: 42px; 
+    padding: 0 10px; 
+    border: 1px solid #dedede;
+} 
+
+textarea { 
+    font: inherit; 
+    margin: 0;
+} 
+
+textarea { 
+    overflow: auto; 
+    vertical-align: top;
+} 
+
+textarea { 
+    height: auto; 
+    min-height: 50px;
+} 
+
+textarea { 
+    background-color: white; 
+    font-family: inherit; 
+    border: 1px solid #dedede; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    -webkit-box-shadow: none; 
+    box-shadow: none; 
+    color: #333333; 
+    display: block; 
+    font-size: 100%; 
+    margin: 0; 
+    padding: 0.48276em; 
+    height: 42px; 
+    width: 100%; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+} 
+
+textarea  { 
+    border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    -o-border-radius: 5px; 
+    -moz-border-radius: 5px;
+} 
+
+#reviews #respond textarea#comment  { 
+    height: 100px;
+} 
+
+input { 
+    font: inherit; 
+    margin: 0;
+} 
+
+input { 
+    line-height: normal;
+} 
+
+input[type="text"] { 
+    background-color: white; 
+    font-family: inherit; 
+    border: 1px solid #dedede; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    -webkit-box-shadow: none; 
+    box-shadow: none; 
+    color: #333333; 
+    display: block; 
+    font-size: 100%; 
+    margin: 0; 
+    padding: 0.48276em; 
+    height: 42px; 
+    width: 100%; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+} 
+
+input[type="text"]  { 
+    border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    -o-border-radius: 5px; 
+    -moz-border-radius: 5px;
+} 
+
+input[type="email"] { 
+    background-color: white; 
+    font-family: inherit; 
+    border: 1px solid #dedede; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    -webkit-box-shadow: none; 
+    box-shadow: none; 
+    color: #333333; 
+    display: block; 
+    font-size: 100%; 
+    margin: 0; 
+    padding: 0.48276em; 
+    height: 42px; 
+    width: 100%; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+} 
+
+input[type="email"]  { 
+    border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    -o-border-radius: 5px; 
+    -moz-border-radius: 5px;
+} 
+
+input[type="file"] { 
+    margin: 0 0 0.96552em 0;
+} 
+
+input[type="file"] { 
+    width: 100%;
+} 
+
+#review_form input[type="file"]  { 
+    margin-bottom: 0;
+} 
+
+input[type="checkbox"] { 
+    box-sizing: border-box; 
+    padding: 0;
+} 
+
+input[type="checkbox"] { 
+    position: relative; 
+    top: 1px;
+} 
+
+.comment-form-cookies-consent label  { 
+    display: inline; 
+    margin: 0 5px; 
+    font-weight: normal;
+} 
+
+input[type="submit"] { 
+    appearance: button; 
+    -webkit-appearance: button; 
+    -moz-appearance: button; 
+    -ms-appearance: button; 
+    cursor: pointer;
+} 
+
+#submit,input[type="submit"] { 
+    border-width: 1px; 
+    border-style: solid; 
+    text-transform: uppercase; 
+    cursor: pointer; 
+    font-family: inherit; 
+    letter-spacing: 2px; 
+    font-weight: bold; 
+    line-height: 1.4; 
+    margin: 0; 
+    position: relative; 
+    text-decoration: none; 
+    text-align: center; 
+    display: -webkit-inline-box; 
+    display: -moz-inline-box; 
+    display: -ms-inline-flexbox; 
+    display: inline-flex; 
+    -webkit-box-pack: center; 
+    -ms-flex-pack: center; 
+    justify-content: center; 
+    -webkit-box-align: center; 
+    -ms-flex-align: center; 
+    -webkit-align-items: center; 
+    align-items: center; 
+    padding: 0 30px; 
+    height: 42px; 
+    font-size: 12px; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px;
+} 
+
+#submit,input[type="submit"] { 
+    font-weight: 500 !important;
+} 
+
+#submit,input[type="submit"] { 
+    border-color: #ffffff !important;
+} 
+
+
+input#submit,input[type="submit"] { 
+    background-color: var(--main-color) !important;
+} 
+
+#submit ,input[type="submit"]  { 
+    border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    -o-border-radius: 5px; 
+    -moz-border-radius: 5px;
+} 
+
+#submit ,input#submit ,.form-submit input ,input[type="submit"]  { 
+    background-color: var(--main-color); 
+    border-color: var(--main-color); 
+    color: #FFF;
+} 
+
+#submit ,input[type="submit"]  { 
+    -webkit-transition: all 200ms ease; 
+    -moz-transition: all 200ms ease; 
+    -o-transition: all 200ms ease; 
+    transition: all 200ms ease;
+} 
+
+
+.form-submit input  { 
+    background-color: var(--main-color); 
+    border-color: var(--main-color); 
+    color: #FFF;
+} 
+
+.star-rating span  { 
+    overflow: hidden; 
+    float: left; 
+    top: 0; 
+    left: 0; 
+    position: absolute; 
+    padding-top: 1.5em; 
+    font-weight: normal; 
+    width: 100%;
+} 
+
+.star-rating span::before { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0; 
+    content: ""; 
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24" fill="%23FF9C00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>') repeat-x; 
+    background-size: 16px;
+} 
+
+.nasa-rating-per .nasa-per-content  { 
+    position: relative; 
+    display: block; 
+    height: 100%; 
+    background: #690; 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px; 
+    border-radius: 3px;
+} 
+
+.required { 
+    color: #f00;
+} 
+
+#reviews #respond .stars span  { 
+    width: 80px; 
+    height: 16px; 
+    position: relative; 
+    float: left; 
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23CCCCCC"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>'); 
+    background-size: 16px; 
+    background-repeat: space;
+} 
+
+.nasa-flex { 
+    display: -webkit-box; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
+    display: flex; 
+    -webkit-box-align: center; 
+    -ms-flex-align: center; 
+    -webkit-align-items: center; 
+    align-items: center;
+} 
+
+p a  { 
+    text-decoration: underline;
+} 
+
+#reviews #respond .stars span a  { 
+    float: left; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 16px; 
+    height: 0; 
+    padding-top: 16px; 
+    overflow: hidden;
+} 
+
+#reviews #respond .stars span a.star-1  { 
+    width: 16px; 
+    z-index: 10;
+} 
+
+.woocommerce-tabs #reviews #respond .stars span a:hover { 
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24" fill="%23FF9C00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>'); 
+    background-size: 16px; 
+    background-repeat: space;
+} 
+
+#reviews #respond .stars span a.star-2  { 
+    width: 32px; 
+    z-index: 9;
+} 
+
+.woocommerce-tabs #reviews #respond .stars span a:hover, .woocommerce-tabs #reviews #respond .stars span a:focus, .woocommerce-tabs #reviews #respond .stars span a.active { 
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24" fill="%23FF9C00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>'); 
+    background-size: 16px; 
+    background-repeat: space;
+} 
+
+#reviews #respond .stars span a.star-3  { 
+    width: 48px; 
+    z-index: 8;
+} 
+
+#reviews #respond .stars span a.star-4  { 
+    width: 64px; 
+    z-index: 7;
+} 
+
+#reviews #respond .stars span a.star-5  { 
+    width: 80px; 
+    z-index: 6;
+} 
+
+svg:not(:root) { 
+    overflow: hidden;
+} 
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#cancel-comment-reply-link.style-1yDn7 {  
+   display:none;  
+}  
+#rating.style-vxMM1 {  
+   display: none;  
+}  

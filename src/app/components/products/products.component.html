@@ -1,0 +1,68 @@
+<input type="text" class="form-control w-50 m-auto" placeholder="search for item" [(ngModel)]="searchTerm">
+
+<div class="row" *ngIf="products.length !== 0; else noProduct">
+  <div class="product-card col-6 col-md-4 col-lg-3 g-md-4 overflow-hidden cursor-pointer position-relative" *ngFor="let product of products | search: searchTerm | paginate: { id: 'foo',
+            itemsPerPage: pageSize,
+            currentPage: currentPage,
+            totalItems: total }">
+
+
+    <div class="product p-2 " [title]="product.title">
+      <div>
+        <figure class="position-relative">
+          <img [routerLink]="['/details', product._id]" [src]="product.imageCover" class="w-100 my-1 "
+            [alt]="product.title">
+
+          <div class="position-absolute cart-container">
+            <div class="position-relative mb-2 cart-container-inner">
+              <i #cartBtn (click)="addToCart(product._id, cartBtn)"
+                class="fas fa-shopping-cart bg-main-light text-black rounded-circle p-2 "></i>
+              <span class="cart-text bg-main text-white  rounded-5"> add to cart </span>
+            </div>
+          </div>
+
+          <div (click)="addToWishlist(product._id)" class="wishlist-btn position-absolute rounded-circle border border-1 bg-white bg-opacity-50 ">
+            <i [ngClass]="{ 'fas': isProductLiked(product._id), 'far': !isProductLiked(product._id) }" class=" fa-heart fa-sm"></i>
+          </div>
+
+        </figure>
+
+        <figcaption class="">
+          <h3 class="h6 d-none d-md-block">{{product.category.name}}</h3>
+          <h4 class="h6 fw-bolder" [routerLink]="['/details', product._id]">
+            {{product.title.split(' ', 2).join(' ')}}
+            <span *ngIf="product.title.split(' ').length > 2">..</span>
+          </h4>
+          <div class="info ">
+            <p class="p-0 m-0 fw-semibold">{{product.price}} EGP</p>
+            <div><i [class.rating-color]="product.ratingsAverage >= num" *ngFor="let num of [1,2,3,4,5]"
+                class="fas fa-star"></i> {{product.ratingsAverage}}</div>
+          </div>
+        </figcaption>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+
+  <div *ngIf="products.length >= 40 || currentPage > 1" class="d-flex justify-content-center my-4">
+    <pagination-controls class="my-pagination" id="foo" (pageChange)="pageChanged($event)"
+      (pageBoundsCorrection)="pageChanged($event)" [maxSize]="9" [directionLinks]="true" [autoHide]="true"
+      [responsive]="true" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page"
+      screenReaderCurrentLabel="You're on page">
+    </pagination-controls>
+  </div>
+</div>
+
+
+<ng-template #noProduct>
+  <div class="container d-flex justify-content-around flex-column align-items-center p-4">
+    <!-- <h2 class="text-center m-0">your cart is empty</h2> -->
+    <img src="./assets/images/no-products.jpg" class="w-50" alt="">
+  </div>
+
+</ng-template>

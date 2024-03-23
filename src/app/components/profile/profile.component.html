@@ -1,0 +1,147 @@
+<form (ngSubmit)="saveEdit()" [formGroup]="editForm" class="bg-white">
+    <section>
+      <div class="row justify-content-center snipcss-YBNf7">
+        <div class="col-lg-9">
+          <div class="profile">
+            <div class="profile-body">
+              <div class="profile-title">
+                <h5 class="title fw-bold">
+                  Personal Details
+                </h5>
+                <a *ngIf="!editing" (click)="startEditing()" class="profile-link">
+                  edit
+                </a>
+                <a type="submit" *ngIf="editing" (click)="saveEdit()" class="profile-link">
+                  save
+                </a>
+              </div>
+              <div class="profile-details">
+                <div class="single-details-item d-flex flex-wrap">
+                  <div class="details-title">
+                    <h6 class="title fw-bold">
+                      Name:
+                    </h6>
+                  </div>
+                  <div class="details-content media-body">
+                    <p *ngIf="!editing"> {{ userData.name }} </p>
+                    <input [(ngModel)]="userData.name" class="form-control" formControlName="name" *ngIf="editing"
+                      type="text" (keyup.enter)="saveEdit()">
+  
+                  </div>
+                </div>
+  
+                <div class="single-details-item d-flex flex-wrap">
+                  <div class="details-title">
+                    <h6 class="title fw-bold">
+                      Email:
+                    </h6>
+                  </div>
+                  <div class="details-content media-body">
+                    <p *ngIf="!editing"> {{ userData.email }} </p>
+                    <input [(ngModel)]="userData.email" class="form-control" formControlName="email" *ngIf="editing"
+                      type="text" (keyup.enter)="saveEdit()">
+                  </div>
+                </div>
+  
+                <div class="single-details-item d-flex flex-wrap">
+                  <div class="details-title">
+                    <h6 class="title fw-bold">
+                      Phone:
+                    </h6>
+                  </div>
+                  <div class="details-content media-body">
+                    <p *ngIf="!editing"> {{ userData.phone }} </p>
+                    <input [(ngModel)]="userData.phone" class="form-control" formControlName="phone" *ngIf="editing"
+                      type="text" (keyup.enter)="saveEdit()">
+                  </div>
+                </div>
+                <div class="single-details-item d-flex flex-wrap">
+                  <div class="details-title">
+                    <h6 class="title fw-bold">
+                      Birthday:
+                    </h6>
+                  </div>
+                  <div class="details-content media-body">
+                    <p>
+                      04 January 1992
+                    </p>
+                  </div>
+                </div>
+                <a *ngIf="!editing" routerLink="resetPassword"
+                  class="profile-link text-main cursor-pointer text-decoration-underline m-3">
+                  reset password
+                </a>
+              </div>
+            </div>
+  
+            <div class="profile-footer mt-4">
+              <div class="profile-title">
+                <h5 class="title fw-bold">
+                  Orders
+                </h5>
+              </div>
+              <div class="mt-4 px-2">
+                <div class="row">
+                  <p *ngIf="orderData.length === 0">no orders yet...</p>
+                  <div *ngIf="orderData.length > 0" class="">
+                    <div *ngFor="let order of orderData"
+                      class="single-order border-bottom my-2 d-flex justify-content-between">
+                      <h5 class="order-id ">
+                        #{{order.id}}
+                      </h5>
+  
+                      <ul class="order-meta">
+                        <!-- <li>
+                            <a class="product" href="#0">
+                              {{order.cartItems.length}} Product
+                            </a>
+                          </li> -->
+                        <li>
+                          <a class="date" href="#0">
+                            {{order.createdAt | date}}
+                          </a>
+                        </li>
+                      </ul>
+  
+                      <div class="single-progress-bar-horizontal delivered ">
+                        <div class="progress-text">
+                          <p *ngIf="order.isDelivered"> Delivered </p>
+                          <p *ngIf="!order.isDelivered"> on the way </p>
+                        </div>
+                        <p class="fw-bold">{{order.totalOrderPrice}} EGP</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  <!-- 
+            <div class="profile-footer mt-45">
+              <div class="profile-title">
+                <h5 class="title fw-bold">
+                  Addresses
+                </h5>
+              </div>
+              <div class="profile-card-info">
+                <div class="row">
+                  <div class="col-md-4 col-sm-6">
+                    <div class="single-card-info d-flex">
+                      <p *ngIf="orderData.length === 0" >no saved addresses</p>
+                      <div *ngIf="orderData.length > 0" class="card-icon">
+                        <div *ngFor="let order of orderData" class="row d-flex">
+                          <h5>{{order.shippingAddress.city}}</h5>
+                          <p>{{order.shippingAddress.details}}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+  
+    </section>
+  </form>
+  

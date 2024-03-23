@@ -1,0 +1,293 @@
+<section class="row gx-4 d-flex justify-content-center align-items-center my-4 p-4 mx-auto">
+    <div class="col-md-3">
+      <owl-carousel-o [options]="brandsCarousel_1">
+        <ng-container *ngFor="let image of productDetails.images">
+          <ng-template carouselSlide>
+            <img [src]="image" class="w-100">
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  
+    <div class="col-md-8 ">
+      <figcaption>
+        <h3 class="fw-bold fs-1 my-4">{{productDetails.title}}</h3>
+        <div><i [class.rating-color]="productDetails.ratingsAverage >= num" *ngFor="let num of [1,2,3,4,5]"
+            class="fas fa-star"></i> {{productDetails.ratingsAverage}} <span
+            class="ms-4 text-main fw-bold">{{productDetails.ratingsQuantity}} reviews</span></div>
+  
+        <p class="fs-4 fw-bold my-4">{{productDetails.price}} EGP</p>
+        <p [innerHTML]=" productDetails.description| description"> </p>
+        <h5 *ngIf="productDetails.quantity <= 10" class="h6">hurry up only {{productDetails.quantity}} left</h5>
+  
+  
+        <div class="d-flex">
+          <div class="position-relative mb-2 cart-container-inner">
+            <button  #cartBtn (click)="addToCart(productDetails._id, cartBtn)"
+             class="btn btn-main my-4 m-auto"> <i class="fas fa-shopping-cart"></i>  add to cart</button>
+          </div>
+  
+          <button (click)="addToWishlist(productDetails._id)" class="btn wishlist-btn">
+            <i [ngClass]="{ 'fas': isProductLiked(productDetails._id), 'far': !isProductLiked(productDetails._id) }" class=" fa-heart fa-sm"></i>
+            add to wishlist
+          </button>
+        </div>
+      </figcaption>
+    </div>
+  </section>
+  
+  
+  <div class="nasa-content nasa-content-reviews snipcss-nrlka" id="nasa-scroll-reviews">
+    <h3 class="nasa-title nasa-crazy-box">
+      Reviews ({{productDetails.ratingsQuantity}})                
+    </h3>
+    <div class="nasa-content-panel">
+      <div id="reviews" class="woocommerce-Reviews row justify-content-between">
+        <div class="nasa-statistic-ratings" class="col-md-5">
+          <h2>
+            Based on {{productDetails.ratingsQuantity}} reviews        
+          </h2>
+          <div class="nasa-avg-rating">
+            <span class="avg-rating-number">
+              {{productDetails.ratingsAverage}}           
+            </span>
+            Overall        
+          </div>
+          <table class="nasa-rating-bars">
+            <tbody>
+              <tr class="nasa-rating-bar">
+                <td class="star-rating-wrap">
+                  <div class="star-rating">
+                    <span style="width: 100%">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-rating-per-wrap">
+                  <div class="nasa-rating-per">
+                    <span style="width: 0%" class="nasa-per-content">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-ratings-number text-right rtl-text-left">
+                  65%
+                </td>
+              </tr>
+              <tr class="nasa-rating-bar">
+                <td class="star-rating-wrap">
+                  <div class="star-rating">
+                    <span style="width: 80%">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-rating-per-wrap">
+                  <div class="nasa-rating-per">
+                    <span style="width: 0%" class="nasa-per-content">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-ratings-number text-right rtl-text-left">
+                  25%
+                </td>
+              </tr>
+              <tr class="nasa-rating-bar">
+                <td class="star-rating-wrap">
+                  <div class="star-rating">
+                    <span style="width: 60%">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-rating-per-wrap">
+                  <div class="nasa-rating-per">
+                    <span style="width: 0%" class="nasa-per-content">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-ratings-number text-right rtl-text-left">
+                  7%
+                </td>
+              </tr>
+              <tr class="nasa-rating-bar">
+                <td class="star-rating-wrap">
+                  <div class="star-rating">
+                    <span style="width: 40%">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-rating-per-wrap">
+                  <div class="nasa-rating-per">
+                    <span style="width: 0%" class="nasa-per-content">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-ratings-number text-right rtl-text-left">
+                  3%
+                </td>
+              </tr>
+              <tr class="nasa-rating-bar">
+                <td class="star-rating-wrap">
+                  <div class="star-rating">
+                    <span style="width: 20%">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-rating-per-wrap">
+                  <div class="nasa-rating-per">
+                    <span style="width: 0%" class="nasa-per-content">
+                    </span>
+                  </div>
+                </td>
+                <td class="nasa-ratings-number text-right rtl-text-left">
+                  0%
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="review_form_wrapper " class="col-md-5">
+          <a class="ns-form-close nasa-stclose close-review-form " href="javascript:void(0);">
+          </a>
+          <div id="review_form bg-white">
+            <a class="hidden-tag nasa-login-register-ajax" data-enable="1" href="https://bynusayba.com/my-account/?redirect_to=https://bynusayba.com/product/ruffled-cardigan/" rel="nofollow">
+            </a>
+            <div id="respond" class="comment-respond">
+              <span id="reply-title" class="comment-reply-title">
+                Be the first to review “{{productDetails.title}}” 
+                <small>
+                  <a rel="nofollow" id="cancel-comment-reply-link" href="/product/ruffled-cardigan/#respond" class="style-1yDn7">
+                    Cancel reply
+                  </a>
+                </small>
+              </span>
+              <form action="https://bynusayba.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" enctype="multipart/form-data">
+                <p class="comment-notes">
+                  <span id="email-notes">
+                    Your email address will not be published.
+                  </span>
+                  <span class="required-field-message">
+                    Required fields are marked 
+                    <span class="required">
+                      *
+                    </span>
+                  </span>
+                </p>
+                <div class="comment-form-rating">
+                  <label for="rating">
+                    Your rating
+                  </label>
+                  <p class="stars">
+                    <span>
+                      <a class="star-1" href="#">
+                        1
+                      </a>
+                      <a class="star-2" href="#">
+                        2
+                      </a>
+                      <a class="star-3" href="#">
+                        3
+                      </a>
+                      <a class="star-4" href="#">
+                        4
+                      </a>
+                      <a class="star-5" href="#">
+                        5
+                      </a>
+                    </span>
+                  </p>
+                  <select name="rating" id="rating" required="" class="style-vxMM1">
+                    <option value="">
+                      Rate…
+                    </option>
+                    <option value="5">
+                      Perfect
+                    </option>
+                    <option value="4">
+                      Good
+                    </option>
+                    <option value="3">
+                      Average
+                    </option>
+                    <option value="2">
+                      Not that bad
+                    </option>
+                    <option value="1">
+                      Very poor
+                    </option>
+                  </select>
+                </div>
+                <p class="comment-form-comment">
+                  <label for="comment">
+                    Your review&nbsp;
+                    <span class="required">
+                      *
+                    </span>
+                  </label>
+                  <textarea id="comment" name="comment" placeholder="Your review" cols="45" rows="8" required="">
+                  </textarea>
+                </p>
+                <p class="comment-form-author">
+                  <label for="author">
+                    Name&nbsp;
+                    <span class="required">
+                      *
+                    </span>
+                  </label>
+                  <input id="author" name="author" type="text" value="" size="30" required="">
+                </p>
+                <p class="comment-form-email">
+                  <label for="email">
+                    Email&nbsp;
+                    <span class="required">
+                      *
+                    </span>
+                  </label>
+                  <input id="email" name="email" type="email" value="" size="30" required="">
+                </p>
+                <p class="nasa-form-media clear-both">
+                  <label for="nasa-comment-media">
+                    Pictures (max size: 3000 kB, max files: 1)&nbsp;
+                  </label>
+                  <input type="file" name="ns_image_upload[]" id="nasa-comment-media" class="ns_image_upload" multiple="" accept=".jpg, .jpeg, .png, .bmp, .gif">
+                </p>
+                <div class="nasa-form-media-wrap">
+                  <p class="svg_image_upload">
+                    <span class="upload-img">
+                      <svg viewBox="0 0 32 32" xml:space="preserve" width="32px" height="32px" fill="currentColor">
+                        <g stroke-width="0">
+                        </g>
+                        <g stroke-linecap="round" stroke-linejoin="round">
+                        </g>
+                        <g>
+                          <path class="st0" d="M23,9l-1.4-2.9c-0.3-0.7-1-1.1-1.8-1.1h-7.5c-0.8,0-1.5,0.4-1.8,1.1L9,9H5c-1.1,0-2,0.9-2,2v14c0,1.1,0.9,2,2,2 h22c1.1,0,2-0.9,2-2V11c0-1.1-0.9-2-2-2H23z">
+                          </path>
+                          <circle class="st0" cx="16" cy="17" r="6">
+                          </circle>
+                        </g>
+                      </svg>
+                    </span>
+                    Add photos
+                  </p>
+                  <p class="nasa-comment-media">
+                    <span class="nasa-flex">
+                      Pictures
+                    </span>
+                    <span class="nasa-flex">
+                      max size:3000 KB
+                    </span>
+                    <span class="nasa-flex">
+                      max files:1
+                    </span>
+                  </p>
+                </div>
+                <p class="form-submit">
+                  <input name="submit" type="submit" id="submit" class="submit" value="Submit">
+                  <input type="hidden" name="comment_post_ID" value="9776" id="comment_post_ID">
+                  <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

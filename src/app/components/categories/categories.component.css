@@ -1,0 +1,12 @@
+.categoryLink:hover {
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+.categoryContainer{
+    margin-bottom: 3rem;
+}
+
+.active-link{
+    font-weight: bold !important;
+}

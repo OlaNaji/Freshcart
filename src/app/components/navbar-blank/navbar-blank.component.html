@@ -1,0 +1,116 @@
+<nav #navBar
+  class="navbar navbar-expand-sm navbar-light bg-light fixed-top d-flex justify-content-center flex-nowrap px-2">
+  <div class="container d-flex justify-content-between align-items-baseline ">
+    <button class="btn btn-primary bg-main d-sm-none" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+      <i class="fas fa-bars"></i></button>
+
+
+    <div>
+      <img src="./assets/images/freshcart-logo.svg" class="navbar-brand cursor-pointer" routerLink="home" alt="">
+    </div>
+
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header p-0">
+        <!-- <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5> -->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav m-auto mt-2 mt-lg-0">
+          <li class="nav-item mx-1">
+            <a class="nav-link" routerLink="home" routerLinkActive="active-link">home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" routerLink="products" routerLinkActive="active-link">products</a>
+          </li>
+          <!-- <li class="nav-item mx-1"> -->
+          <!-- <a class="nav-link" routerLink="categories" routerLinkActive="active-link">categories</a> -->
+          <!-- </li> -->
+          <li class="nav-item mx-1" (mouseenter)="showDropdownMenu()" (mouseleave)="hideDropdownMenu()">
+            <a routerLink="categories" routerLinkActive="active-link" class="nav-link "
+              aria-expanded="false">Categories</a>
+            <div [ngClass]="{'show': isDropdownOpen}" class="dropdown-menu" aria-labelledby="dropdownId">
+              <a *ngFor="let category of categories" [routerLink]="['/categories', category._id]"
+                class="dropdown-item fw-light px-4 ">{{category.name}}</a>
+            </div>
+          </li>
+
+
+          <li class="nav-item dropdown " (mouseenter)="showBrandsDropdownMenu()"
+            (mouseleave)="hideBrandsDropdownMenu()">
+            <a routerLink="brands" routerLinkActive="active-link" class="nav-link" aria-expanded="false">Brands</a>
+            <div [ngClass]="{'show': isBrandsDropdownOpen}" class="dropdown-menu brandsDropdown"
+              aria-labelledby="dropdownId">
+              <div class="row">
+                <div *ngFor="let brand of brands" class="col-md-4  ">
+                  <a [routerLink]="['/brands', brand._id]" class="dropdown-item fw-light px-4 ">{{brand.name}}</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="user-info">
+      <ul class="navbar-nav mt-2 d-flex flex-row justify-content-around align-items-baseline">
+        <li class="nav-item dropdown d-none d-md-block w-50">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"><i class="fa-regular fa-circle-user fa-xl text-black"></i></a>
+          <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
+            <a class="dropdown-item cursor-pointer px-4" routerLink="profile"><i class="fa-regular fa-id-card"></i> profile</a>
+            <a class="dropdown-item" class="cursor-pointer" (click)="logout()"><i
+                class="fa-solid fa-arrow-right-from-bracket ps-4"></i> log out</a>
+          </div>
+        </li>
+
+        <li routerLink="wishlist" class="position-relative cursor-pointer  d-none d-md-block">
+          <i class="fa-regular fa-heart fa-xl "></i>
+          <span class="badge rounded-4 bg-main position-absolute">{{wishlistItems}}</span>
+        </li>
+
+        <li routerLink="cart" class="position-relative cursor-pointer ">
+          <i class="fas fa-shopping-cart fa-xl "></i>
+          <span class="badge rounded-4 bg-main position-absolute">{{cartNumber}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<nav class="fixed-bottom navbar-light bg-light d-md-none">
+  <div class="user-info">
+    <ul class="navbar-nav mt-2 d-flex flex-row justify-content-evenly align-items-baseline">
+      <li routerLink="home" class="position-relative cursor-pointer ">
+        <i class="fas fa-home fa-lg m-4"></i>
+        <!-- <p>home</p> -->
+      </li>
+
+      <!-- <li routerLink="cart" class="position-relative cursor-pointer ">
+        <i class="fa-solid fa-table-cells fa-lg m-4"></i>
+        <p>categories</p> 
+      </li> -->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle p-0" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false"><i class="fa-regular fa-circle-user fa-lg text-black"></i>
+        </a>
+        <!-- <p>profile</p> -->
+        <div class="dropdown-menu" aria-labelledby="dropdownId">
+          <a class="dropdown-item px-2" href="#"><i class="fa-regular fa-id-card pe-2"></i> profile</a>
+          <a class="dropdown-item px-2" class="pointer-event" (click)="logout()"><i
+              class="fa-solid fa-arrow-right-from-bracket px-2"></i> log out</a>
+        </div>
+      </li>
+
+      <li routerLink="wishlist" class="position-relative cursor-pointer">
+        <i class="fa-regular fa-heart fa-lg m-4"></i>
+        <!-- <p>wishlist</p> -->
+        <span class="badge rounded-4 bg-main position-absolute">{{wishlistItems}}</span>
+      </li>
+    </ul>
+  </div>
+</nav>

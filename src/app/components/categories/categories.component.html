@@ -1,0 +1,21 @@
+<section>
+
+    <div class="row flex-column-reverse flex-md-row">
+        <div class="col-md-3 ">
+            <h2 class=" h3 fw-semibold text-capitalize">categories</h2>
+            <div class="row justify-content-around categoryContainer">
+          <a *ngFor="let category of categories" 
+              [routerLink]="['/categories', category._id]"
+              routerLinkActive="active-link"
+              (click)="showProducts(category._id)"
+              class="categoryLink fw-light m-2 col-5 col-md-12">{{category.name}}</a>
+        </div>
+      </div>
+  
+      <div class="col-md-9">
+        <app-products  [category]="selectedCategory"></app-products>
+      </div>
+    </div>
+  
+  </section>
+  

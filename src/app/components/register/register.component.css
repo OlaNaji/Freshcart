@@ -1,0 +1,21 @@
+input.ng-invalid.ng-touched,
+input.ng-invalid:focus{
+    border: 1px solid red;
+    box-shadow: 0 0 0 0.1rem rgba(253, 13, 13, 0.25);
+ }
+
+ input.ng-valid.ng-touched,
+ input.ng-valid:focus{
+    border: 1px solid green;
+    box-shadow: 0 0 0 0.1rem rgba(13, 253, 113, 0.25);
+ }
+
+ .form-control:focus {
+    box-shadow: none;
+ }
+
+ @media only screen and (max-width: 525px){
+   form{
+       width: 75% !important;
+   }
+ }

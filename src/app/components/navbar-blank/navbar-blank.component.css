@@ -1,0 +1,129 @@
+nav {
+    transition: all 0.3s
+  }
+  
+  .navbar-nav .dropdown-menu {
+    min-width: 100px;
+    position: absolute;
+  }
+  
+  .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .navbar .user-info ul li {
+    width: 1.5rem;
+    margin-left: 1.2rem;
+  }
+  
+  .fixed-bottom .user-info span {
+    top: 0;
+    left: 40px;
+  }
+  
+  .navbar-nav .nav-item a {
+    width: fit-content;
+    font-weight: bold;
+    /* margin: 0.4rem 1rem ; */
+  }
+  
+  .brandsDropdown {
+    padding-right: 15rem;
+  }
+  
+  .brandsDropdown .row {
+    width: 250%;
+  }
+  
+  .dropdown-item {
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:focus,
+  .dropdown-item:hover,
+  .dropdown-item.active,
+  .dropdown-item:active {
+    color: var(--main-color);
+    background-color: transparent !important;
+    text-decoration: underline;
+  }
+  
+   .nav-item .nav-link {
+    text-transform: capitalize;
+    position: relative;
+  }
+  
+   .nav-item .nav-link.active-link {
+    position: relative;
+  }
+  
+   .nav-item .nav-link::after,
+   .nav-item .nav-link.active-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 0;
+    border: none;
+    transition: width 0.5s;
+  }
+  
+   .nav-item .nav-link:hover::after {
+    width: 100%;
+  }
+  
+   .nav-item .nav-link.active-link::after {
+    width: 100%;
+  }
+  
+  span {
+    top: -15px;
+    left: 15px;
+  }
+  
+  
+  .offcanvas-header .btn-close {
+    padding: 1rem;
+    margin-left: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  
+  @media only screen and (max-width: 525px) {
+    nav img {
+      width: 100% !important;
+      margin-left: 1rem;
+    }
+  
+    .offcanvas.offcanvas-start {
+      width: 200px !important;
+    }
+  
+    .dropdown-menu {
+      /* position: static !important; */
+    }
+  
+    .brandsDropdown {
+      padding-right: 1rem;
+      margin-bottom: 5rem;
+    }
+  
+    .dropdown-menu .row {
+      width: 100%;
+    }
+  
+  }
+  
+  @media (max-width: 767px) {
+  
+    .container,
+    .container-sm {
+      max-width: 100% !important;
+    }
+  }
+  

@@ -1,0 +1,178 @@
+li{
+    list-style: none;
+}
+
+.profile .profile-header .profile-author  { 
+    padding: 2rem; 
+    padding-top: 0; 
+    position: relative; 
+    z-index: 9; 
+    margin-top: -80px;
+} 
+
+.profile .profile-title  { 
+    position: relative; 
+    background-color: #F2F2F2; 
+    height: 3rem; 
+    padding: 0 1rem; 
+    border-radius: 0.5rem;
+} 
+
+
+
+.profile .profile-title .title  { 
+    line-height: 3rem; 
+    color: #000; 
+    font-weight: 500; 
+    font-size: 1rem;
+} 
+
+
+
+.profile .profile-title .profile-link  { 
+    font-size: 1rem; 
+    line-height: 1.5rem; 
+    font-weight: 700; 
+    color: var(--main-color); 
+    position: absolute; 
+    top: 50%; 
+    right: 1rem; 
+    transform: translateY(-50%); 
+    text-transform: uppercase; 
+    letter-spacing: 0.08em;
+    cursor: pointer;
+} 
+
+a,a:hover { 
+    text-decoration: none;
+} 
+
+.profile .profile-details .single-details-item  { 
+    padding: 0.5rem 1rem 0;
+} 
+
+
+
+.profile .profile-details .single-details-item .details-title  { 
+    width: 145px; 
+    margin-top: 0.5rem;
+} 
+
+.profile .profile-details .single-details-item .details-content  { 
+    margin-top: 0.5rem;
+} 
+
+
+.profile .profile-details .single-details-item .details-title .title  { 
+    font-size: 14px; 
+    line-height: 22px; 
+    font-weight: bold; 
+    color: #4C4C4C;
+} 
+
+.profile .profile-details .single-details-item .details-content p  { 
+    font-size: 1rem; 
+    line-height: 22px; 
+    color: #000; 
+    font-weight: 400;
+} 
+
+.profile .single-card-info  { 
+    padding: 1rem; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08); 
+    margin-top: 1rem; 
+    border-radius: 0.5rem; 
+    align-items: center;
+} 
+
+.profile .single-card-info .card-info  { 
+    padding-left: 1rem;
+} 
+
+.profile .single-card-info .card-icon img  { 
+    border-radius: 4px;
+} 
+
+.profile .single-card-info .card-info .card-name  { 
+    font-size: 1rem; 
+    line-height: 22px; 
+    font-weight: 400; 
+    color: #000;
+} 
+
+.profile .single-card-info .card-info .card-number  { 
+    font-size: 14px; 
+    line-height: 20px; 
+    font-weight: 400; 
+    color: #4C4C4C; 
+    margin-top: 5px;
+} 
+
+span { 
+    display: inline-block;
+} 
+
+.profile .single-card-info .card-info .card-number span  { 
+    margin-left: 0.5rem;
+} 
+
+
+
+
+
+.order-meta  { 
+    margin-top: 4px;
+} 
+
+
+
+
+.order-price  { 
+    font-weight: 500; 
+    font-size: 16px; 
+    line-height: 22px; 
+    color: #000; 
+    position: absolute; 
+    top: 16px; 
+    right: 16px;
+} 
+
+.single-progress-bar-horizontal .progress-text p  { 
+    font-weight: 500; 
+    font-size: 14px;
+} 
+
+.single-progress-bar-horizontal.delivered .progress-text p  { 
+    color: #7CB637;
+} 
+
+.single-progress-bar-horizontal .progress-bar-inner .bar-inner  { 
+    width: 255px; 
+    height: 20px; 
+    border-radius: 50px; 
+    background-color: #EFEFEF; 
+    position: relative; 
+    overflow: hidden;
+} 
+
+.single-progress-bar-horizontal .progress-bar-inner .bar-inner .progress-horizontal  { 
+    position: relative; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    border-radius: 50px; 
+    transition: all 1s linear; 
+    width: 0;
+} 
+
+.single-progress-bar-horizontal.delivered .progress-bar-inner .bar-inner .progress-horizontal  { 
+    background-color: #7CB637; 
+    width: 100%;
+} 
+
+
+@media only screen and (max-width: 525px) {
+    *{
+        font-size: 14px;
+    }
+}

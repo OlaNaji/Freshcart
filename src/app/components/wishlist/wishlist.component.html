@@ -1,0 +1,60 @@
+<h2 class=" h3 fw-semibold text-capitalize">wishlist</h2>
+<div class="row" *ngIf="wishlistArray.length !== 0; else emptyWishlist">
+  <div class="product-card col-6 col-md-3  g-md-4 overflow-hidden cursor-pointer position-relative"
+    *ngFor="let product of products">
+
+
+    <div class="product p-2 " [title]="product.title">
+      <div>
+        <figure class="position-relative">
+          <img [routerLink]="['/details', product._id]" [src]="product.imageCover" class="w-100 my-1 "
+            [alt]="product.title">
+
+          <div class="position-absolute cart-container">
+            <div class="position-relative mb-2 cart-container-inner">
+              <i #cartBtn (click)="addToCart(product._id, cartBtn)"
+                class="fas fa-shopping-cart bg-main-light text-black rounded-circle p-2 "></i>
+              <span class="cart-text bg-main text-white  rounded-5"> add to cart </span>
+            </div>
+          </div>
+
+          <div (click)="addToWishlist(product._id)"
+            class="wishlist-btn position-absolute rounded-circle border border-1 bg-white bg-opacity-50 ">
+            <i class="fas fa-heart fa-sm"></i>
+          </div>
+
+        </figure>
+
+        <figcaption class="">
+          <h3 class="h6 d-none d-md-block">{{product.category.name}}</h3>
+          <h4 class="h6 fw-bolder" [routerLink]="['/details', product._id]">
+            {{product.title.split(' ', 2).join(' ')}}
+            <span *ngIf="product.title.split(' ').length > 2">..</span>
+          </h4>
+          <div class="info ">
+            <p class="p-0 m-0 fw-semibold">{{product.price}} EGP</p>
+            <div><i [class.rating-color]="product.ratingsAverage >= num" *ngFor="let num of [1,2,3,4,5]"
+                class="fas fa-star"></i> {{product.ratingsAverage}}</div>
+          </div>
+        </figcaption>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+</div>
+
+
+<ng-template #emptyWishlist>
+  <div class="container d-flex justify-content-around flex-column align-items-center p-4">
+    <img src="./assets/images/wishlist.png" width="200px" alt="">
+    <h5 class="text-center m-4">seems like you did not make a wish yet, browse our products and make one now</h5>
+    <button routerLink="home" type="submit" class="btn btn-primary btn-main d-block mt-4">
+      start shopping
+    </button>
+  </div>
+</ng-template>

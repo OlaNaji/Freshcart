@@ -1,0 +1,31 @@
+.fa-multiply{
+    padding: 0.25rem 0.4rem;
+    transition:  background-color 0.3s;
+}
+.fa-multiply:hover, .btn:hover{
+    background-color: lightgrey !important;
+}
+
+
+.price{
+    font-size: 1.2rem ;
+    letter-spacing: 1px;
+}
+@media only screen and (max-width: 992px){
+
+    section{
+        width: 100% !important;
+        margin-bottom: 3rem !important;
+    }
+}
+@media only screen and (max-width: 525px) {
+    *{
+        font-size: 14px !important;
+    }
+    section{
+        width: 100% !important;
+    }
+    .cart-image{
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,36 @@
+@import url(../products/products.component.css);
+
+
+
+
+@media only screen and (min-width: 767px) {
+  .slider-big {
+    height: 300px;
+  }
+
+  .slider-small {
+    height: 150px;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+  .slider-big {
+    height: 460px;
+  }
+
+  .slider-small {
+    height: 230px;
+  }
+
+}
+
+@media only screen and (max-width: 525px) {
+    section{
+        padding: 2rem;
+    }
+  .slider-big {
+    height: 200px;
+  }
+
+}

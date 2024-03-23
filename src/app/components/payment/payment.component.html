@@ -1,0 +1,89 @@
+<div class="row flex-column-reverse">
+    <section class="col-lg-8 m-auto">
+      <form (ngSubmit)="submitPayment()" [formGroup]="paymentForm">
+        <h3>Personal information</h3>
+        <div class="my-4 ">
+          <label for="name">name</label>
+          <input class="form-control" type="text" placeholder="full name" formControlName="name">
+        </div>
+  
+        <div class="my-4 ">
+          <label for="email">email</label>
+          <input class="form-control" type="email" placeholder="example@example.com" formControlName="email">
+        </div>
+  
+        <div class="my-4 ">
+          <label for="phone">phone</label>
+          <input class="form-control" type="tel" formControlName="phoneNum" maxlength="11">
+        </div>
+  
+        <h3>shipping information</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label" for="city">Country:</label>
+            <input value="Egypt" readonly type="text" class="form-control">
+          </div>
+  
+          <div class="col-md-6">
+            <label class="form-label" for="city">city:</label>
+            <select formControlName="city" class="form-select" title="select city">
+              <option disabled selected hidden>Select City</option>
+              <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="mt-4">
+          <label for="streetAddress">street address</label>
+          <input type="text" formControlName="streetAddress" class="form-control" id="">
+        </div>
+  
+        <div class="row justify-content-between flex-column flex-md-row mb-4">
+          <div class="col-md-4">
+            <div class="mt-4">
+              <label for="BuildingNum">building number:</label>
+              <input type="number" formControlName="BuildingNum" class="form-control" id="">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mt-4">
+              <label for="floorNum">floor number:</label>
+              <input type="number" formControlName="floorNum" class="form-control" id="">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mt-4">
+              <label for="aptNum">apartment number:</label>
+              <input type="number" formControlName="aptNum" class="form-control" id="">
+            </div>
+          </div>
+        </div>
+  
+        <h3>payment method</h3>
+        <div class="payment-outer w-75 d-flex flex-column flex-md-row my-3 ">
+  
+          <div class=" d-flex  align-items-end w-50 payment-container">
+            <label class="mx-2 form-check-label"> <i class="fa-brands fa-cc-visa"></i> Online Payment </label>
+            <input type="radio" class="form-check form-check-input" formControlName="paymentMethod" value="online">
+          </div>
+          <div class=" d-flex  align-items-end w-50 payment-container">
+            <label class="mx-2 form-check-label"> <i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery </label>
+            <input type="radio" class="form-check form-check-input" formControlName="paymentMethod" value="cash">
+          </div>
+        </div>
+  
+        <!-- <p *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</p> -->
+        <button [disabled]="paymentForm.invalid" type="submit" class="btn btn-main d-block me-auto mt-2">
+          checkout
+          <!-- <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i> -->
+        </button>
+  
+      </form>
+    </section>
+  
+    <!-- <section class="col-lg-4 p-4">
+      <app-cart></app-cart>
+    </section> -->
+  
+  </div>
+  

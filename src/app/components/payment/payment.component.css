@@ -1,0 +1,21 @@
+section.col-lg-8{
+    margin-bottom: 4rem ;
+  }
+
+  .form-check-input:checked{
+    background-color: var(--main-color) !important;
+    border-color:var(--main-color) !important ;
+  }
+
+@media only screen and (max-width: 525px) {
+  
+    .payment-outer {
+    width: 100% !important;
+  }
+  .payment-container{
+    justify-content: space-between;
+    width: 75% !important;
+  }
+
+
+}

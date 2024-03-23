@@ -1,0 +1,47 @@
+<section class="bg-light w-75 m-auto p-2 p-lg-4 border-4 " *ngIf="cartItem; else emptyCart">
+    <div class="cart-header d-flex justify-content-between align-items-baseline mb-4 ">
+      <h2 class=" h3 fw-semibold text-capitalize ">shopping cart</h2>
+      <button (click)="clearCart()" class="btn ms-auto"> <span><i class="far fa-trash-can"></i></span> empty cart</button>
+    </div>
+    
+      <div class="container">
+        <div class="row p-2 px-md-4  border-bottom " *ngFor="let item of cartItem.products">
+          
+          <figure class="col-4 col-md-2 d-flex align-items-center ">
+            <a (click)="removeCartItem(item.product._id)">
+              <i class="fas fa-multiply me-2 me-md-4 cursor-pointer rounded-circle"></i>
+            </a>
+    
+            <img [src]="item.product.imageCover" class="w-75 cart-image" [alt]="item.product.title">
+          </figure>
+    
+          <div class="col-8 col-md-10  d-flex justify-content-between align-items-center">
+            <figcaption class="ms-2">
+              <h5 class="fw-lighter ">{{item.product.title}}</h5>
+              <p>price: <span class="fw-bold">{{item.price}} EGP</span></p>
+            </figcaption>
+    
+            <div class="cart-info d-flex flex-column flex-md-row justify-content-center align-items-md-baseline  align-items-center">
+              <button class="btn rounded-2 bg-main-light fw-bolder" (click)="updateQuantity(item.product._id, item.count - 1)"> - </button>
+              <p class="m-0 py-1 p-md-2">{{item.count}}</p>
+              <button class="btn rounded-2 bg-main-light fw-bolder" (click)="updateQuantity(item.product._id, item.count + 1)"> + </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="d-flex flex-column  justify-content-center align-items-baseline my-4">
+        <h4 class="price">Total price: <span class="fw-bold">{{cartItem.totalCartPrice}} EGP</span></h4>
+        <button [routerLink]="['/payment', cartItem._id]" type="submit" class="btn btn-main text-capitalize">proceed to checkout</button>
+      
+      </div>
+    </section>
+    
+    
+    <ng-template #emptyCart>
+      <div class="container d-flex justify-content-around flex-column align-items-center p-4">
+        <h2 class="text-center m-0">your cart is empty</h2>
+        <img src="./assets/images/empty-cart.png" class="w-50" alt="">
+      </div>
+    </ng-template>
+    

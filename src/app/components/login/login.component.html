@@ -1,0 +1,46 @@
+<form (ngSubmit)="setLoginForm()" [formGroup]="loginForm" class="w-50 m-auto mt-4">
+
+  <h3 class="fw-semibold text-capitalize text-center">log in</h3>
+
+  <div class="my-4 ">
+    <label for="email">email</label>
+    <input class="form-control" type="email" placeholder="example@example.com" formControlName="email">
+    <div
+      *ngIf="loginForm.get('email')?.errors && (loginForm.get('email')?.touched || loginForm.get('email')?.value.length > 0)"
+      class="alert alert-danger mt-2 ">
+      <p *ngIf="loginForm.get('email')?.getError('required')">email is required</p>
+      <p *ngIf="loginForm.get('email')?.getError('email')">invalid email </p>
+    </div>
+  </div>
+
+  <div class="my-4 ">
+    <label for="password">password</label>
+    <input class="form-control" type="password" placeholder="password" formControlName="password">
+    <div
+      *ngIf="loginForm.get('password')?.errors && (loginForm.get('password')?.touched || loginForm.get('password')?.value.length > 0)"
+      class="alert alert-danger mt-2 ">
+      <p *ngIf="loginForm.get('password')?.getError('required')">password is required</p>
+      <p *ngIf="loginForm.get('password')?.getError('pattern')">invalid password </p>
+    </div>
+  </div>
+
+
+  <p *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</p>
+  <div class="d-flex justify-content-between align-items-center gx-2 flex-column mt-4">
+    <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-main w-100 d-block mt-2">
+      log in
+      <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+    </button>
+  </div>
+  <div class="d-flex justify-content-between flex-column  flex-sm-row mt-3">
+    <a class="profile-link my-3">
+      don't have an account? <span routerLink="/register"
+        class="text-main cursor-pointer text-decoration-underline">create one now</span>
+    </a>
+    <a class="profile-link">
+      <span routerLink="/resetPassword" class="text-main cursor-pointer text-decoration-underline">Forgot
+        password?</span>
+    </a>
+  </div>
+
+</form>
