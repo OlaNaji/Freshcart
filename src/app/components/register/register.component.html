@@ -32,7 +32,7 @@
         *ngIf="registerForm.get('password')?.errors && (registerForm.get('password')?.touched || registerForm.get('password')?.value.length > 0)"
         class="alert alert-danger mt-2 ">
         <p *ngIf="registerForm.get('password')?.getError('required')">password is required</p>
-        <p *ngIf="registerForm.get('password')?.getError('pattern')">invalid password </p>
+        <p *ngIf="registerForm.get('password')?.getError('pattern')">invalid password: must start with capital letter</p>
       </div>
     </div>
   
