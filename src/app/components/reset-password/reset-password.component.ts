@@ -103,6 +103,8 @@ export class ResetPasswordComponent implements OnInit{
       
       this._UserInfoService.resetForgotPassword(userData).subscribe({
         next: (response) => {console.log(response);
+          this._Router.navigate(['/login'])
+
         }
       })
     }
@@ -114,6 +116,7 @@ export class ResetPasswordComponent implements OnInit{
         next: (response) => { 
           if(response.status === "Success"){
             this.codeSuccess = true
+
           }
         },
       })
